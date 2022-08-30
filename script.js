@@ -32,8 +32,17 @@ var boxes = [
 
 var volumes = [];
 
+// With an inline callback function
 boxes.forEach(function(box){
   volumes.push(box.length * box.width * box.height);
 })  
-
 console.log(volumes);
+// [ 3000, 7500, 15000, 26250, 42000 ]
+
+
+// With an arrow function
+boxes.forEach(box => {
+  volumes.push(box.length * box.width * box.height);
+})  
+console.log(volumes); // [ 3000, 7500, 15000, 26250, 42000 ]
+
